@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação do Cassino</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="simulacao.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <span class="icon"><i class="fas fa-chart-bar"></i></span>
+        <span class="app-name">Simulação do Cassino</span>
+    </nav>    
+    <div class="container">
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="controls">
+            <button id="startButton" class="button start-button" enabled>Iniciar Simulação</button>
+            <button id="pauseButton" class="button pause-button" disabled>Pausar Simulação</button>
+            <button id="stepButton" class="button next-button" enabled>Executar Próxima Rodada</button>
+            <button id="resetButton" class="button reset-button" disabled>Resetar Simulação</button>
+            <input type="checkbox" id="chartTypeToggle" class="toggle-checkbox">
+            <label for="chartTypeToggle" class="toggle-label"></label>
+            <p class="graphText">Gráficos de Barras</p>
+        </div>
+        <div class="info">
+            <div class="info-column">
+                <p id="infoTextCol1">Saldo Inicial do Jogador: </p>
+                <p id="infoTextCol2">Saldo do Jogador: </p>
+            </div>
+            <div class="info-column">
+                <p id="infoTextCol3">Lucro do Jogador: </p>
+                <p id="infoTextCol4">Lucro da Máquina: </p>
+            </div>
+            <div class="info-column">
+                <p id="infoTextCol5">Rodadas Apostadas: </p>
+                <p id="infoTextCol6">Rodadas Totais: </p>
+            </div>
+            <div class="info-column">
+                <p id="infoTextCol7">Porcentagem de vitória: </p>
+                <p id="infoTextCol8">Porcentagem de derrota: </p>
+            </div>
+            <div class="info-column">
+                <p id="infoTextCol9">Lucro Médio: </p>
+                <p id="infoTextCol10">Numero de Jogadores: </p>
+            </div>
+        </div>
+        <hr class="separator">
+        <div class="input-container">
+            <div class="input-column">
+                <label for="saldoInicialInput">Saldo Inicial do Jogador:</label>
+                <input type="number" id="saldoInicialInput" class="input-field" value="1000">
+            </div>
+            <div class="input-column">
+                <label for="porcentagemMaquinaInput">Porcentagem da Máquina:</label>
+                <input type="number" id="porcentagemMaquinaInput" class="input-field" value="51">
+            </div>
+        </div>
+        <div class="input-container">
+            <div class="input-column">
+                <label for="rodadasTotaisInput">Rodadas Totais:</label>
+                <input type="number" id="rodadasTotaisInput" class="input-field" value="100">
+            </div>
+            <div class="input-column">
+                <label for="valorApostaInput">Valor da Aposta:</label>
+                <input type="number" id="valorApostaInput" class="input-field" value="100">
+            </div>
+        </div>
+        <div class="input-container">
+            <div class="input-column">
+                <label for="numeroJogadoresInput">Número de Jogadores:</label>
+                <input type="number" id="numeroJogadoresInput" class="input-field" value="1">
+            </div>
+            <div class="input-column">
+            </div>
+        </div>
+    </div>  
+</body>
+</html>
